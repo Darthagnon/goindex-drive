@@ -87,6 +87,13 @@ This project aims to provide a better UI for Google's Drive function and allows 
 
 
 ### To-do
+- [ ] Darthagnon: Ensure [Icons8 license compliance](https://icons8.com/license)
+- [ ] Darthagnon: Document alternative themes/how to change themes
+- [ ] Darthagnon: Remove unnecessary WIP files left by previous maintainers
+- [ ] Darthagnon: Remove Chinese language/font support to avoid calling Chinese CDNs/servers (privacy concerns; Winnie the Pooh is evil)
+- [ ] Darthagnon: Replace all occurences of Chinese code/comments with English
+- [ ] Darthagnon: Remove stupid weeb artwork
+- [x] Darthagnon: Document redployment process and necessary edits for anyone to rehost on their GitHub.
 - [ ] A small button to grab all download links in a directory
 - [ ] Automatically fetch subtitles
 - [ ] Better error fallback page & debug log under files to see problems like rate limit, api limit coming from Google to know what's going on.
@@ -122,6 +129,25 @@ This project aims to provide a better UI for Google's Drive function and allows 
 - [x] Support multiple drives (personal & team) without changing server's code
 - [x] [Fix Apostrophe (') in file names (throws an error)](https://github.com/kulokenci/goindex-drive/issues/17)
 
+## Setup jsdelivr CDN for GitHub
+* Clone this repo
+* In the following files, change all references to this repo to the name of your GitHub Repo:
+```
+goindex-drive-master/goindex/go2index/index.js
+goindex-drive-master/goindex/dist/app.js
+goindex-drive-master/goindex/src/App.vue
+```
+e.g. if it says ```https://cdn.jsdelivr.net/gh/Darthagnon/goindex-drive@master/goindex/dist/js/chunk-0856609f.03c96958.js```, change ```Darthagnon``` to your GitHub username.
+* [JSDelivr](https://www.jsdelivr.com/?docs=gh) will automatically deliver all your GitHub-hosted JS via their content delivery network.
+* *NB you could just leave the code as-is and it will work, but then if my repo ever disappears or is banned, your site will stop working!*
+* Other CDNs this script depends on (if any one of these :
+ * GitHub (JS/code)
+ * Google Drive (content/media)
+ * JSDelivr (JS)
+ * Cloudflare (primary site server)
+ * TaoBao (???)
+ * AliCDN (font - Chinese?)
+ * s1.hdslb.com (stupid weeb art assets)
 
 ## Setup Cloudfare Workers
 * Go to the [official CloudFlare Workers Website](https://workers.cloudflare.com/).
@@ -248,6 +274,7 @@ This means your rate limit was reached (100k hits per day).
 * Source: [maple3142](https://github.com/maple3142/GDIndex)
 * Video: [INDIA - Create Google Drive Index using CloudFlare Workers](https://www.youtube.com/watch?v=8WMddzVX1Dw)
 * Worker Script (Multiple Google Accounts) : [index-multiple-accounts.js](https://github.com/alx-xlx/goindex/blob/master/goindex-acrou/go2index/index-multiple-accounts.js)
+* Search icon, Data Loading icon: [Icons8](https://icons8.com/license)
 
 
 ## License
