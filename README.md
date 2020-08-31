@@ -1,6 +1,6 @@
 This project aims to provide a better UI for Google's Drive function and allows to quickly index all your files. Cloudflare Workers allow you to write JavaScript which runs on all of Cloudflare's 150+ global data centers.
 
-![GoIndex Drive](https://github.com/CHEF-KOCH/goindex-drive/blob/master/.github/old%20code/Logo/go-drive-logo.gif?raw=true?raw=true)
+![GoIndex Drive](https://github.com/Darthagnon/goindex-drive/blob/master/.github/old%20code/Logo/go-drive-logo.gif?raw=true?raw=true)
 
 ## Table of Contents
 * [Table of Contents](#table-of-contents)
@@ -130,7 +130,7 @@ This project aims to provide a better UI for Google's Drive function and allows 
 **Now verify your current Worker**
 
 * Verify your eMail and go to `Workers`, press `Create a Worker`.
-* Now copy the content of the [index.js](https://github.com/CHEF-KOCH/goindex-drive/blob/master/goindex/go2index/index.js) to the script section.
+* Now copy the content of the [index.js](https://github.com/Darthagnon/goindex-drive/blob/master/goindex/go2index/index.js) to the script section.
 
 * Edit this object in the script with the details you generated above
 ```js
@@ -178,7 +178,7 @@ It will show you a `client ID` and `client secret`. Use these values in rclone c
 2. Follow the given instructions under [https://rclone.org/drive/](https://rclone.org/drive/) to bind a drive.
 3. Execute the `commandrclone config file` to find the file `rclone.conf path`.
 4. Open `rclone.conf`,find the configuration `root_folder_id` and `refresh_token`.
-5. Download `index.js` in [https://github.com/CHEF-KOCH/goindex-drive/blob/master/goindex/go2index/index.js](https://github.com/CHEF-KOCH/goindex-drive/blob/master/goindex/go2index/index.js) and fill in `root` and `refresh_token`.
+5. Download `index.js` in [https://github.com/Darthagnon/goindex-drive/blob/master/goindex/go2index/index.js](https://github.com/Darthagnon/goindex-drive/blob/master/goindex/go2index/index.js) and fill in `root` and `refresh_token`.
 6. Deploy the code via [Cloudflare Workers](https://workers.cloudflare.com).
 
 
