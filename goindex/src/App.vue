@@ -15,7 +15,7 @@ export default {
   },
   data: function() {
     return {
-      github: "https://github.com/CHEF-KOCH/goindex-drive",
+      github: "https://github.com/Darthagnon/goindex-drive",
     };
   },
   watch: {
